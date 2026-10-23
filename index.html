@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="2026학년도 디지털·AI 활용 선도학교 수업 공개 및 수업나눔의 날 참관 안내: 교시별 시간, 장소, 수업 주제">
+<meta name="description" content="2026학년도 디지털·AI 활용 선도학교 수업 공개 및 수업나눔의 날 참관 안내: 교시별 시간, 장소, 수업 주제, 교실 위치">
 <meta property="og:title" content="수업 공개 및 수업나눔의 날 참관 안내">
-<meta property="og:description" content="교시별 시간, 장소, 수업 주제를 확인하세요.">
+<meta property="og:description" content="교시별 시간, 장소, 수업 주제와 교실 위치를 확인하세요.">
 <meta name="theme-color" content="#fbedd6">
 <title>수업나눔의 날 참관 안내</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,7 +124,7 @@ main .inner{display:flex;flex-direction:column;gap:20px;padding-block:14px 50px}
 .topic small{display:block;font-weight:400;font-size:13.5px;color:var(--muted);margin-top:3px}
 .card-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px;border-top:1.5px dashed var(--line)}
 /* 나무 팻말 */
-.plate{position:relative;display:inline-flex;flex-direction:column;align-items:flex-start;background:var(--wood);color:var(--wood-ink);border-radius:7px;padding:6px 14px 7px;line-height:1.15;min-width:0;
+.plate{position:relative;display:inline-flex;flex-direction:column;align-items:flex-start;background:var(--wood);color:var(--wood-ink);border-radius:7px;padding:6px 16px 7px;line-height:1.15;min-width:0;
   background-image:repeating-linear-gradient(176deg,rgba(255,255,255,.06) 0 2px,transparent 2px 7px);box-shadow:0 3px 0 #63391a}
 .plate::before,.plate::after{content:"";position:absolute;top:6px;width:4px;height:4px;border-radius:50%;background:#e9c891}
 .plate::before{left:5px}.plate::after{right:5px}
@@ -209,6 +209,55 @@ footer .inner{padding-block:6px 30px;font-size:12.5px;color:var(--muted);text-al
   .c-room{grid-area:room} .c-tch{grid-area:tch;text-align:right}
 }
 @media (min-width:641px){ .c-subj .grade{display:none} }
+
+/* ── 교실 위치 ── */
+.roomlink{appearance:none;border:0;background:none;font:inherit;color:inherit;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:5px;text-align:left}
+.roomlink svg{color:var(--fox-deep)}
+button.plate{appearance:none;border:0;font:inherit;cursor:pointer;text-align:left}
+button.plate:hover{filter:brightness(1.1)}
+.plate b svg{margin-left:5px;vertical-align:-1px;opacity:.85}
+.mapwrap{display:flex;flex-direction:column;gap:16px}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;padding:0 14px}
+.maplead{margin:0;font-size:14px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:12px 14px}
+.outnote{margin:0;padding:0 14px 6px;font-size:13.5px;color:var(--muted)}
+.finder-head{display:flex;justify-content:space-between;align-items:baseline;gap:4px 8px;flex-wrap:wrap;padding:0 2px 4px}
+.finder-head h3{font-family:var(--display);font-weight:400;font-size:19px;margin:0}
+.finder-head span{font-size:12.5px;color:var(--muted)}
+.find{appearance:none;font:inherit;color:inherit;text-align:left;display:flex;align-items:center;gap:10px;background:var(--paper-2);border:1.5px solid var(--line);border-radius:12px;padding:6px 10px 6px 6px;cursor:pointer;width:100%;min-width:0}
+.find>svg{color:var(--fox-deep);flex:none}
+.find:hover{border-color:var(--fox)}
+.find.static{cursor:default}
+.plate.mini{padding:4px 10px 5px;box-shadow:0 2px 0 #63391a;flex:none;min-width:58px;align-items:center}
+.plate.mini b{font-size:17px}
+.find-txt{display:flex;flex-direction:column;min-width:0;flex:1}
+.find-txt b{font-size:14px}
+.find-txt>span{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px}
+.find-txt .sw{width:7px;height:7px;border-radius:50%;background:var(--c);display:inline-block}
+.find-go{font-size:24px;line-height:1;color:var(--fox-deep);flex:none}
+.mapfloor{background:var(--paper);border:1.5px solid var(--line);border-radius:20px;box-shadow:0 4px 0 var(--line);padding:14px 0 8px;display:flex;flex-direction:column;gap:10px;scroll-margin:24px}
+.fhead{display:flex;align-items:center;gap:10px;padding:0 14px}
+.fbadge{display:inline-flex;align-items:baseline;gap:1px;background:var(--wood);color:var(--wood-ink);border-radius:8px;padding:3px 12px 4px;font-family:var(--display);font-size:15px;box-shadow:0 3px 0 #63391a}
+.fbadge b{font-weight:400;font-size:22px;line-height:1}
+.fcount{font-size:14px;font-weight:600;color:var(--fox-deep)}
+.fcount.muted{color:var(--muted);font-weight:500}
+.swipe{padding:0 14px;font-size:12px;color:var(--muted);display:none;margin-top:-4px}
+@media (max-width:820px){.swipe{display:block}}
+.mapscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 14px 8px;scroll-behavior:smooth}
+.plan{position:relative;height:226px}
+.floorlbl{position:absolute;top:2px;height:148px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--display);font-size:30px;line-height:1.05;color:var(--fox);opacity:.9;pointer-events:none}
+.cell{position:absolute;box-sizing:border-box;border:1px solid var(--line-2);background:#fffdf8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;text-align:center;font-size:11px;line-height:1.12;padding:2px;overflow:hidden;color:var(--ink);word-break:keep-all;overflow-wrap:anywhere}
+.cell span{max-width:100%}
+.cell.f{background:var(--paper-2);color:var(--muted);font-size:9.5px}
+.cell.c{font-weight:700;font-size:12.5px}
+.cell.hl{background:var(--fox);border:2px solid var(--fox-deep);color:#fff;font-weight:700;font-size:12px;z-index:2;border-radius:6px}
+.cell.hl small{font-size:10.5px;font-weight:600;color:#fff;opacity:.95}
+.cell.focus{animation:pulse .8s ease 3;outline:3px solid var(--leaf);outline-offset:2px;z-index:3}
+@keyframes pulse{0%,100%{transform:scale(1)}45%{transform:scale(1.1)}}
+.bl{position:absolute;left:0;font-size:11.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+.others summary{cursor:pointer;font-family:var(--display);font-size:16px;color:var(--fox-deep);padding:8px 4px}
+.others-in{display:flex;flex-direction:column;gap:16px;padding-top:8px}
+.mapnote{font-size:13px;color:var(--muted);margin:0}
+.muted{color:var(--muted)}
 @keyframes up{from{transform:translateY(24px);opacity:.6}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
@@ -246,15 +295,12 @@ img{max-width:100%}
       <div class="tabs" role="tablist" aria-label="보기 방식">
         <button role="tab" id="tab-time" aria-selected="true">교시별</button>
         <button role="tab" id="tab-table" aria-selected="false">전체 표</button>
+        <button role="tab" id="tab-map" aria-selected="false">교실 위치</button>
       </div>
     </div>
 
     <div id="view"></div>
 
-    <div class="note">
-      <span>장소의 ‘3-14’는 3학년 14반 교실, ‘2-10’은 2학년 10반 교실입니다.</span>
-      <span>점심시간 12:30 ~ 13:20</span>
-    </div>
   </div>
 </main>
 <footer><div class="inner">2026학년도 디지털·AI 활용 선도학교 · 수업 공개 및 교원학습공동체 수업나눔의 날</div></footer>
@@ -288,11 +334,15 @@ const slot = p => SLOTS.find(s=>s.p===p);
 const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const cvar = subj => `--c:var(${SUBJ_COLOR[subj]})`;
 function plateParts(r){
-  const m=r.match(/^(\d)-(\d+)$/); if(m) return [`${m[1]}학년 ${m[2]}반`, r];
-  const lab=r.match(/^(.+?)\s+([A-Z]\d+)$/); if(lab) return [lab[1], lab[2]];
+  const code=ROOMINFO[r]; const fl=code?` · ${code[1]}층`:"";
+  const m=r.match(/^(\d)-(\d+)$/); if(m) return [`${m[1]}학년 ${m[2]}반${fl}`, r];
+  const lab=r.match(/^(.+?)\s+([A-Z]\d+)$/); if(lab) return [`${lab[1]}${fl}`, lab[2]];
   return ["장소", r];
 }
-function plate(r){ const [s,b]=plateParts(r); return `<span class="plate"><small>${esc(s)}</small><b>${esc(b)}</b></span>`; }
+const pinSvg=`<svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><path d="M6 13s4.5-4.2 4.5-7.5a4.5 4.5 0 0 0-9 0C1.5 8.8 6 13 6 13z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="5.5" r="1.6" fill="currentColor"/></svg>`;
+function plate(r){ const [s,b]=plateParts(r); const c=ROOMINFO[r];
+  return c?`<button class="plate" data-code="${c}" aria-label="${esc(b)} 위치를 배치도에서 보기"><small>${esc(s)}</small><b>${esc(b)}${pinSvg}</b></button>`
+          :`<span class="plate"><small>${esc(s)}</small><b>${esc(b)}</b></span>`; }
 function roomText(r){ const [s,b]=plateParts(r); return s==="장소"?esc(b):`<b>${esc(b)}</b> <span style="color:var(--muted)">${esc(s)}</span>`; }
 
 const FILTERS = [
@@ -302,7 +352,7 @@ const FILTERS = [
   {key:"lid",label:"수업",wide:true,opts:LESSONS.map((l,i)=>({v:i,txt:l.topic.replace(/[.!]$/,""),sw:l.subj}))},
 ];
 const state = {sel:{p:new Set(),subj:new Set(),g:new Set(),lid:new Set()}, view:"time", open:null};
-try{ const v=localStorage.getItem("oc-view"); if(v==="table"||v==="time") state.view=v; }catch(e){}
+try{ const v=localStorage.getItem("oc-view"); if(v==="table"||v==="time"||v==="map") state.view=v; }catch(e){}
 
 const filtered = () => ROWS.filter(r=>FILTERS.every(f=>!state.sel[f.key].size || state.sel[f.key].has(r[f.key])));
 const countFor = (key,v) => ROWS.filter(r=>r[key]===v).length;
@@ -381,9 +431,11 @@ function renderView(){
   document.getElementById("count").innerHTML = `수업 <b>${lessons}</b>개 · 공개 <b>${rows.length}</b>회`;
   document.getElementById("tab-time").setAttribute("aria-selected",state.view==="time");
   document.getElementById("tab-table").setAttribute("aria-selected",state.view==="table");
+  document.getElementById("tab-map").setAttribute("aria-selected",state.view==="map");
   if(!rows.length){ el.innerHTML=`<div class="empty">선택한 조건에 맞는 수업이 없습니다.<button class="linkbtn" id="empty-reset">필터 모두 해제</button></div>`;
     document.getElementById("empty-reset").onclick=()=>{Object.values(state.sel).forEach(s=>s.clear()); render();}; return; }
 
+  if(state.view==="map"){ renderMap(rows, el); return; }
   if(state.view==="time"){
     const ps=[...new Set(rows.map(r=>r.p))]; let html=""; let lunchDone=false;
     ps.forEach(p=>{
@@ -397,19 +449,107 @@ function renderView(){
         </article>`).join("")+`</div></section>`;
     });
     el.innerHTML=`<div class="periods">${html}</div>`;
+    el.querySelectorAll("button.plate[data-code]").forEach(b=>b.onclick=()=>{ state.focus=b.dataset.code; setView("map"); });
   } else {
     let prev=null;
     el.innerHTML=`<div class="tablebox"><table><thead><tr><th>교시</th><th>시간</th><th>학년</th><th>과목</th><th>수업 주제</th><th>장소</th><th>수업자</th></tr></thead><tbody>`+
       rows.map(r=>{const s=slot(r.p); const start=prev!==null&&prev!==r.p; prev=r.p;
-        return `<tr class="${start?"pstart":""}"><td class="num c-p"><b>${r.p}</b>교시</td><td class="num c-time">${s.s}~${s.e}</td><td class="num c-g">${r.g}학년</td><td class="c-subj">${subjTag(r)}<span class="grade">${r.g}학년</span></td><td class="c-topic">${esc(r.topic)}${r.sub?`<span class="sub">${esc(r.sub)}</span>`:""}</td><td class="c-room">${roomText(r.room)}</td><td class="c-tch">${esc(r.t)}</td></tr>`;}).join("")+
+        return `<tr class="${start?"pstart":""}"><td class="num c-p"><b>${r.p}</b>교시</td><td class="num c-time">${s.s}~${s.e}</td><td class="num c-g">${r.g}학년</td><td class="c-subj">${subjTag(r)}<span class="grade">${r.g}학년</span></td><td class="c-topic">${esc(r.topic)}${r.sub?`<span class="sub">${esc(r.sub)}</span>`:""}</td><td class="c-room">${ROOMINFO[r.room]?`<button class="roomlink" data-code="${ROOMINFO[r.room]}">${roomText(r.room)}${pinSvg}</button>`:roomText(r.room)}</td><td class="c-tch">${esc(r.t)}</td></tr>`;}).join("")+
       `</tbody></table></div>`;
+    el.querySelectorAll("button.roomlink").forEach(b=>b.onclick=()=>{ state.focus=b.dataset.code; setView("map"); });
   }
+}
+
+// 2026학년도 교실 배치도 (A는 Ace동, B는 Best동). 좌표는 배치도 원본의 가로 위치를 그대로 옮긴 값
+const ROOMINFO = {"3-14":"B301","3-13":"B205","3-7":"A208","3-9":"B201","3-1":"A201","3-4":"A204","3-5":"A205","3-11":"B203","과학실 B305":"B305","과학실 B307":"B307","2-10":"B303","2-12":"A407"};
+const FLOORS = {
+5:{b1:[[85,215,'계단'],[215,347,'수나카B5(도담)','B509'],[347,397,'엘리베이터'],[397,532,'홈베이스'],[532,570,'음수대'],[570,723,'화장실'],[790,922,'계단'],[922,1187,'1학년부','B508']],
+   B:[[1187,1335,'과학실험실3(탐구+)','B507']],
+   b2:[[85,347,'협력종합예술실','B501'],[347,600,'무용실','B502'],[600,723,'예체능활동실','B503'],[790,922,'개별학습반3','B504'],[922,1055,'1-13','B505'],[1055,1187,'1-14','B506']],
+   a1:[[85,150,'계단'],[150,215,'복지상담부','A511'],[215,410,'홈베이스'],[410,475,'음수대'],[475,605,'화장실'],[605,660,'창고'],[790,922,'계단·엘리베이터'],[922,1055,'화장실']],
+   a2:[[85,215,'1-5','A501'],[215,347,'1-6','A502'],[347,475,'1-7','A503'],[475,600,'1-8','A504'],[600,725,'1-9','A505'],[725,790,'상담실4','A506'],[790,922,'1-10','A507'],[922,1055,'1-11','A508'],[1055,1187,'1-12','A509'],[1187,1335,'진로활동실','A510']]},
+4:{b1:[[85,217,'계단'],[217,350,'학생회실','B412'],[350,400,'엘리베이터'],[400,532,'홈베이스'],[532,570,'음수대'],[570,735,'화장실'],[800,935,'계단'],[935,1218,'2학년부','B411'],[1218,1335,'개별학습반2','B410']],
+   b2:[[85,285,'음악실1','B401'],[285,412,'악기보관실','B402'],[412,607,'음악실2','B403'],[607,735,'음악실3','B404'],[800,868,'준비실','B405'],[868,1070,'미술실1','B406'],[1070,1272,'미술실2','B407'],[1272,1335,'준비실','B408']],
+   a1:[[85,150,'계단'],[150,215,'창의인성부','A411'],[215,412,'홈베이스'],[412,480,'음수대'],[480,608,'화장실'],[608,665,'창고'],[800,935,'계단·엘리베이터'],[935,1070,'화장실']],
+   a2:[[85,217,'1-1','A401'],[217,350,'1-2','A402'],[350,480,'1-3','A403'],[480,608,'1-4','A404'],[608,735,'2-11','A405'],[735,800,'상담실3','A406'],[800,935,'2-12','A407'],[935,1070,'2-13','A408'],[1070,1203,'2-14','A409'],[1203,1335,'미술실3','A410']]},
+3:{b1:[[85,217,'계단'],[217,347,'수나카B3(소담)','B310'],[347,400,'엘리베이터'],[400,532,'홈베이스'],[532,570,'음수대'],[570,725,'화장실'],[790,925,'계단'],[925,1128,'정보과학부','B309'],[1128,1188,'기자재실'],[1188,1335,'생활지도부','B308']],
+   b2:[[85,217,'3-14','B301'],[217,350,'2-9','B302'],[350,477,'2-10','B303'],[477,540,'실험준비실','B304'],[540,725,'과학실험실1(창의+)','B305'],[790,990,'컴퓨터실1','B306'],[990,1188,'과학실험실2(상상+)','B307'],[1255,1335,'학생교감']],
+   a1:[[85,150,'계단'],[150,215,'대외협력부','A310'],[215,410,'홈베이스'],[410,477,'음수대'],[477,605,'화장실'],[605,660,'창고'],[790,925,'계단·엘리베이터'],[925,1058,'화장실']],
+   a2:[[85,217,'2-1','A301'],[217,350,'2-2','A302'],[350,477,'2-3','A303'],[477,603,'2-4','A304'],[603,725,'2-5','A305'],[725,790,'상담실2','A306'],[790,925,'2-6','A307'],[925,1058,'2-7','A308'],[1058,1187,'2-8','A309']],
+   A:[[1255,1335,'체육관']]},
+2:{b1:[[85,217,'계단'],[217,350,'진로교육부','B209'],[350,398,'엘리베이터'],[398,532,'홈베이스'],[532,570,'음수대'],[570,725,'화장실'],[790,925,'계단'],[925,1058,'북카페']],
+   B:[[1058,1335,'도서관(꿈마루)','B207']],
+   b2:[[85,217,'3-9','B201'],[217,350,'3-10','B202'],[350,477,'3-11','B203'],[477,603,'3-12','B204'],[603,725,'3-13','B205'],[790,858,'창고','B208'],[858,1058,'인디교실(융합+)','B206']],
+   a1:[[85,150,'계단'],[150,215,'교육연구부','A210'],[215,410,'3학년부','A211'],[410,477,'음수대'],[477,605,'화장실'],[605,660,'창고'],[790,925,'계단·엘리베이터'],[925,1058,'화장실'],[1270,1335,'시청각실']],
+   a2:[[85,217,'3-1','A201'],[217,350,'3-2','A202'],[350,477,'3-3','A203'],[477,603,'3-4','A204'],[603,725,'3-5','A205'],[725,790,'상담실1','A206'],[790,925,'3-6','A207'],[925,1058,'3-7','A208'],[1058,1210,'3-8','A209'],[1270,1335,'식당']]},
+1:{b1:[[85,217,'계단'],[217,350,'체육안전부','B109'],[350,398,'엘리베이터'],[398,532,'홈베이스'],[532,570,'음수대'],[570,725,'화장실'],[790,925,'계단'],[925,1195,'공감교실(토론발표실)','B107']],
+   b2:[[85,285,'가사실습실','B101'],[285,350,'교과서 보관실'],[350,410,'행정 휴게실'],[410,603,'기술실습실','B103'],[603,725,'보건실B','B104'],[790,925,'Wee클래스','B105'],[925,990,'수나카B1(정담)','B106']],
+   a1:[[85,150,'계단'],[150,215,'성적 처리실','A113'],[215,282,'휴게실(여)','A112'],[282,350,'탈의실'],[350,410,'교무 지원실','A111'],[410,475,'인쇄실','A110'],[475,540,'시설 관리실'],[540,665,'교직원 화장실'],[665,725,'당직실','A109'],[790,925,'계단·엘리베이터'],[925,1195,'홀-2/전시실']],
+   a2:[[85,150,'스튜디오'],[150,215,'방송실','A101'],[215,285,'서버실'],[285,410,'교무기획부','A103'],[410,540,'교장실','A104'],[540,603,'문서고'],[603,725,'행정실','A105'],[725,858,'홀-1'],[858,990,'개별학습반1','A106'],[990,1128,'보건실A','A107'],[1128,1195,'회의실','A108'],[1283,1335,'식당']]}
+};
+const MAP_K = 0.62, ROWY = {b1:[0,34],b2:[42,48],B:[0,90],a1:[116,34],a2:[158,48],A:[116,90]};
+const FAC = /^(계단|엘리베이터|계단·엘리베이터|화장실|음수대|창고|홈베이스|교직원 화장실)$/;
+const roomCode = r => ROOMINFO[r] || null;
+const roomWhere = code => code ? `${code[1]}층 · ${code[0]==="A"?"A동(Ace)":"B동(Best)"}` : "";
+
+function renderMap(rows, el){
+  const byCode = {};
+  rows.forEach(r=>{ const c=roomCode(r.room); if(!c) return; (byCode[c]=byCode[c]||{room:r.room,rows:[]}).rows.push(r); });
+  const outdoor = rows.filter(r=>!roomCode(r.room));
+  const codes = Object.keys(byCode).sort((a,b)=>a[1]-b[1] || a.localeCompare(b));
+  const periodsOf = list => [...new Set(list.map(r=>r.p))].sort().join("·")+"교시";
+  const chip = c => { const it=byCode[c]; const [,big]=plateParts(it.room);
+    const subj=[...new Set(it.rows.map(r=>r.subj))];
+    return `<button class="find" data-code="${c}"><span class="plate mini"><b>${esc(big)}</b></span>
+      <span class="find-txt"><b>${periodsOf(it.rows)}</b><span>${subj.map(x=>`<i class="sw" style="${cvar(x)}"></i>${x}`).join(" ")}</span></span>${pinSvg}</button>`; };
+
+  const hlFloors = new Set(codes.map(c=>+c[1]));
+  const floorHtml = f => {
+    const F = FLOORS[f]; let cells="";
+    for(const row in F){ const [y,h]=ROWY[row];
+      F[row].forEach(([x0,x1,label,code])=>{
+        const hit = code && byCode[code];
+        const cls = hit ? "cell hl" : FAC.test(label) ? "cell f" : /^\d-\d+$/.test(label) ? "cell c" : "cell";
+        cells += `<div class="${cls}"${code?` data-code="${code}"`:""} style="left:${Math.round((x0-85)*MAP_K)}px;top:${y}px;width:${Math.round((x1-x0)*MAP_K)}px;height:${h}px"><span>${esc(label).replace("(","<br>(").replace("·","<br>")}</span>${hit?`<small>${periodsOf(hit.rows)}</small>`:""}</div>`;
+      });
+    }
+    const mine = codes.filter(c=>+c[1]===f);
+    return `<section class="mapfloor" id="floor-${f}">
+      <div class="fhead"><span class="fbadge"><b>${f}</b>층</span>${mine.length?`<span class="fcount">수업 공개 교실 ${mine.length}곳</span>`:`<span class="fcount muted">수업 공개 교실 없음</span>`}</div>
+      ${mine.length?`<div class="chips">${mine.map(chip).join("")}</div>`:""}
+      <div class="mapscroll"><div class="plan" style="width:${Math.round(1250*MAP_K)}px">${cells}
+        <div class="floorlbl" style="left:${Math.round(640*MAP_K)}px;width:${Math.round(65*MAP_K)}px">${f}<br>F</div>
+        <span class="bl" style="top:92px">▲ B동 (Best)</span><span class="bl" style="top:208px">▲ A동 (Ace)</span></div></div>
+      <div class="swipe">배치도를 옆으로 밀어서 볼 수 있어요</div>
+    </section>`;
+  };
+  const main=[5,4,3,2,1].filter(f=>hlFloors.has(f)), rest=[5,4,3,2,1].filter(f=>!hlFloors.has(f));
+  el.innerHTML = `<div class="mapwrap">
+    <p class="maplead">주황색 칸이 수업 공개 교실이에요. 교실 버튼을 누르면 배치도에서 위치를 짚어 드려요. <span class="muted">A는 Ace동, B는 Best동입니다.</span></p>
+    ${main.map(floorHtml).join("")}
+    ${outdoor.length?`<section class="mapfloor out"><div class="fhead"><span class="fbadge">야외</span><span class="fcount">중정 · ${periodsOf(outdoor)} 체육</span></div><p class="outnote">중정은 A동과 B동 사이에 있는 외부 공간입니다.</p></section>`:""}
+    ${!main.length&&!outdoor.length?'<div class="empty">선택한 조건에 맞는 교실이 없어요.</div>':""}
+    ${rest.length?`<details class="others"><summary>다른 층 배치도 보기 (${rest.map(f=>f+"층").join(", ")})</summary><div class="others-in">${rest.map(floorHtml).join("")}</div></details>`:""}
+  </div>`;
+  el.querySelectorAll(".find[data-code]").forEach(b=>b.onclick=()=>focusRoom(b.dataset.code));
+  if(state.focus){ const c=state.focus; state.focus=null; requestAnimationFrame(()=>focusRoom(c)); }
+}
+
+function focusRoom(code){
+  const cell=document.querySelector(`.plan .cell[data-code="${code}"]`); if(!cell) return;
+  const floor=cell.closest(".mapfloor"); const sc=cell.closest(".mapscroll");
+  const det=cell.closest("details"); if(det) det.open=true;
+  sc.scrollLeft = cell.offsetLeft - sc.clientWidth/2 + cell.offsetWidth/2;
+  sc.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth", block:"center"});
+  document.querySelectorAll(".cell.focus").forEach(c=>c.classList.remove("focus"));
+  void cell.offsetWidth; cell.classList.add("focus");
 }
 
 function render(){ renderBell(); renderFilters(); renderView(); }
 function setView(v){ state.view=v; try{localStorage.setItem("oc-view",v)}catch(e){} renderView(); }
 document.getElementById("tab-time").onclick=()=>setView("time");
 document.getElementById("tab-table").onclick=()=>setView("table");
+document.getElementById("tab-map").onclick=()=>setView("map");
 document.addEventListener("click",()=>{ if(state.open){ state.open=null; renderFilters(); }});
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&state.open){ const k=state.open; state.open=null; renderFilters(); document.getElementById("dd-"+k)?.focus(); }});
 renderFacts(); render();
